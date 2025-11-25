@@ -2,6 +2,7 @@
 
 .hero {
   padding-top: rem(74);
+  position: relative;
 
   @include small {
     padding-top: rem(125);

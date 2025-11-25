@@ -34,7 +34,9 @@ body {
 h1,
 .heading-xl,
 h2,
-.heading-lg {
+.heading-lg,
+h3,
+.heading-md {
   font-family: var(--font-family-accent);
   line-height: 1;
 }
@@ -48,17 +50,21 @@ h1,
 
 h2,
 .heading-lg {
-  font-size: fluid(32, 60);
+  font-size: fluid(32, 60)  ;
   font-weight: 600;
   letter-spacing: -1.8px;
 }
 
 h3,
 .heading-md {
+  font-size: fluid(24, 32);
+  font-weight: 600;
 }
 
 h4,
 .heading-sm {
+  font-size: fluid(16, 20);
+  font-weight: 600;
 }
 
 h5,

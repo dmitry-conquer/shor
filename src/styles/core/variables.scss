@@ -14,9 +14,9 @@
 
   --color-primary: #063251;
   --color-primary-transparent: #063251d5;
-  --color-gray: #f8f5f4;
   --color-secondary: #96e4cd;
   --color-accent: #f7be45;
+  --color-gray: #f8f5f4;
 
   // ===============================
   // 🔤 TYPOGRAPHY SYSTEM
@@ -37,8 +37,8 @@
   // 🎭 BORDERS & RADIUS
   // ===============================
 
-  --radius-sm: #{rem(8)};
-  --radius-md: #{rem(12)};
+  --radius-sm: #{rem(6)};
+  --radius-md: #{rem(10)};
   --radius-lg: #{rem(20)};
   --radius-xl: #{rem(70)};
   --radius-full: 50%;

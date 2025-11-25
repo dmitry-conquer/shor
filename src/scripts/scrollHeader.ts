@@ -7,7 +7,7 @@ export default class ScrollHeader {
   private isTicking: boolean = false;
 
   constructor() {
-    this.scrollOffset = 100;
+    this.scrollOffset = 70;
     this.rootElement = document.getElementById("main-header");
     if (!this.rootElement) return;
     this.bindEvents();
