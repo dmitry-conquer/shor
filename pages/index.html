@@ -6,11 +6,37 @@
     <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
     <title>Home page</title>
   </head>
-  <body data-smooth-scroll="true">
+  <body>
     <div id="page" class="site-page">
       {{> header}}
       <main id="primary" class="site-main">
-        <div style="height: 300vh"></div>
+        <section class="hero">
+          <picture>
+            <source srcset="/images/home/hero-bg-mobile.png" media="(max-width: 767.98px)" />
+            <img src="/images/home/hero-bg.png" alt="Hero Background" class="hero__background" />
+          </picture>
+          <div class="hero__container container">
+            <div class="hero__content">
+              <h1 class="hero__title heading-xl">
+                Get Working <br />
+                Capital,Fast!
+              </h1>
+              <div class="hero__text">
+                <p>
+                  Shor Capital can deliver business funding in as little as <br />
+                  eight hours for amounts ranging from $5,000 to $500,000
+                </p>
+              </div>
+              <div class="hero__buttons">
+                <a href="#" class="hero__button button button--primary">BECOME A PARTNER</a>
+                <a href="#" class="hero__button button button--transparent">APPLY FOR FUNDING</a>
+              </div>
+            </div>
+            <div class="hero__image">
+              <img src="/images/home/hero-image.png" alt="Hero Image" />
+            </div>
+          </div>
+        </section>
       </main>
       {{> footer}}
     </div>
