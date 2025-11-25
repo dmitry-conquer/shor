@@ -1,1 +1,103 @@
 @use "../helpers" as *;
+
+.footer {
+  background-color: var(--color-white);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(24);
+
+    @include medium {
+      flex-direction: column;
+      justify-content: stretch;
+      align-items: stretch;
+    }
+  }
+
+  &__left {
+    padding-block: fluid(40, 80);
+    padding-right: fluid(20, 215);
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 500%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background-color: var(--color-primary);
+      border-radius: 0 rem(500) rem(500) 0;
+
+      @include medium {
+        right: 20%;
+      }
+
+      @include small {
+        right: rem(-13);
+      }
+    }
+
+    &-content {
+      position: relative;
+      z-index: 2;
+      max-width: rem(374);
+    }
+  }
+
+  &__title {
+    color: var(--color-white);
+    margin-bottom: fluid(16, 22);
+  }
+
+  &__text {
+    color: var(--color-white);
+  }
+
+  &__right {
+    flex: 0 1 rem(655);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: fluid(24, 50);
+
+    @include medium {
+      flex: 0 1 auto;
+      align-items: flex-start;
+      padding-bottom: rem(16);
+    }
+  }
+
+  &__logo {
+  }
+
+  &__logo-image {
+    max-width: fluid(206, 331);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: rem(8) rem(32);
+    @include medium {
+      flex-direction: column;
+      justify-content: stretch;
+    }
+  }
+
+  &__info-text {
+    font-size: fluid(14, 16);
+
+    br {
+      display: none;
+      @include x-small {
+        display: inline !important;
+      }
+    }
+  }
+}
