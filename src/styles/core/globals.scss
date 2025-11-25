@@ -1,0 +1,101 @@
+@use "helpers" as *;
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-family: var(--font-family-base);
+  color: var(--color-primary);
+  background-color: var(--color-gray);
+}
+
+// ===========================
+// 📐 CONTAINER & LAYOUT
+// ===========================
+
+.site-page {
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  max-width: var(--container-width);
+  padding-inline: var(--container-padding-x);
+  margin-inline: auto;
+}
+
+// ===========================
+// ✒️ TYPOGRAPHY
+// ===========================
+
+h1,
+.heading-xl,
+h2,
+.heading-lg {
+  font-family: var(--font-family-accent);
+  line-height: 1;
+}
+
+h1,
+.heading-xl {
+  font-weight: 700;
+  font-size: fluid(45, 80);
+  color: var(--color-white);
+}
+
+h2,
+.heading-lg {
+  font-size: fluid(32, 60);
+  font-weight: 600;
+  letter-spacing: -1.8px;
+}
+
+h3,
+.heading-md {
+}
+
+h4,
+.heading-sm {
+}
+
+h5,
+.heading-xs {
+}
+
+p,
+.text-base {
+}
+
+.spacer {
+  --desktop: #{rem(80)};
+  --tablet: #{rem(60)};
+  --mobile: #{rem(40)};
+
+  height: var(--desktop);
+
+  @include medium {
+    height: var(--tablet);
+  }
+  @include small {
+    height: var(--mobile);
+  }
+}
+
+a:not([class]) {
+  @include hover {
+    text-decoration: underline;
+  }
+}
+
+p:not([class]):not(:last-of-type) {
+  margin-bottom: rem(16);
+}
+
+@include large {
+  br {
+    display: none !important;
+  }
+}

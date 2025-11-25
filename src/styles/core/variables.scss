@@ -1,0 +1,61 @@
+@use "helpers" as *;
+
+// ===================================
+// 🎨 Design Tokens System
+// ===================================
+
+:root {
+  // ===============================
+  // 🌈 COLOR PALETTE
+  // ===============================
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-primary: #063251;
+  --color-primary-transparent: #063251d5;
+  --color-gray: #f8f5f4;
+  --color-secondary: #96e4cd;
+  --color-accent: #f7be45;
+
+  // ===============================
+  // 🔤 TYPOGRAPHY SYSTEM
+  // ===============================
+
+  // Font families
+  --font-family-base: "Poppins", sans-serif;
+  --font-family-accent: "Golos Text", sans-serif;
+
+  // ===============================
+  // 🎯 LAYOUT
+  // ===============================
+
+  --container-width: #{rem(1560)};
+  --container-padding-x: #{rem(20)};
+
+  // ===============================
+  // 🎭 BORDERS & RADIUS
+  // ===============================
+
+  --radius-sm: #{rem(8)};
+  --radius-md: #{rem(12)};
+  --radius-lg: #{rem(20)};
+  --radius-xl: #{rem(70)};
+  --radius-full: 50%;
+
+  // ===============================
+  // 🌟 SHADOWS
+  // ===============================
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+  // ===============================
+  // ⏳ TRANSITIONS
+  // ===============================
+
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.4s ease;
+  --transition-slow: 0.6s ease;
+}

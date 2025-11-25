@@ -1,0 +1,58 @@
+@use "../helpers" as *;
+
+.button {
+  padding: rem(15) rem(32);
+  border-radius: var(--radius-lg);
+  color: var(--color-white);
+  border: rem(1) solid;
+  transition: all var(--transition-base);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: fluid(12, 14);
+  font-weight: 600;
+  line-height: 1;
+
+  @include hover {
+    background: conic-gradient(from -90deg at 61.03% 50%, #4dc4bf 0deg, #f7be45 360deg);
+  }
+
+  &--primary {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+  }
+
+  &--transparent {
+    border-color: var(--color-primary);
+    background-color: transparent;
+  }
+
+  &--arrow {
+    color: var(--color-primary);
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    column-gap: fluid(5, 10);
+    border-color: var(--color-white);
+    padding: fluid(12, 15) fluid(8, 16);
+
+    @include hover {
+      background: var(--color-white);
+      opacity: 0.8;
+      &::after {
+        transform: translateX(rem(5));
+      }
+    }
+
+    &::after {
+      content: "";
+      background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M.85%208c0-.33.257-.608.588-.608h11.72L9.813%203.887l-.074-.095a.625.625%200%200%201%20.026-.698l-.001-.011v-.001h.002l.047-.05.048-.052h.012a.57.57%200%200%201%20.776.05l4.331%204.542a.63.63%200%200%201%200%20.856l-4.33%204.542a.574.574%200%200%201-.837%200%20.625.625%200%200%201%200-.857l3.343-3.505H1.437A.6.6%200%200%201%20.85%208Z%22%20fill%3D%22%23063251%22%20stroke%3D%22%23063251%22%20stroke-width%3D%22.3%22%2F%3E%3C%2Fsvg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: rem(16);
+      height: rem(16);
+      flex-shrink: 0;
+      transition: transform var(--transition-fast);
+    }
+  }
+}
