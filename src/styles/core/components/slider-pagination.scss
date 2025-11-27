@@ -1,0 +1,25 @@
+@use "../helpers" as *;
+
+.slider-pagination {
+  position: static;
+  display: none;
+  column-gap: rem(6);
+  padding-top: rem(24);
+  width: 100% !important;
+  transform: translateX(0) !important;
+
+  @include small {
+    display: flex;
+  }
+
+  .swiper-pagination-bullet {
+    margin: 0 !important;
+    flex-shrink: 0;
+    width: rem(7) !important;
+    height: rem(7) !important;
+    transform: scale(1) !important;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: var(--color-primary);
+  }
+}

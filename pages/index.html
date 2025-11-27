@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
     <title>Home page</title>
   </head>
   <body>
@@ -85,9 +86,104 @@
             </div>
           </div>
         </section>
+
+        <section class="industries">
+          <picture>
+            <source srcset="/images/bg1-mobile.png" media="(max-width: 767.98px)" />
+            <img src="/images/bg1.png" alt="Industries Background" class="industries__background" />
+          </picture>
+          <div class="industries__container container">
+            <div class="industries__header">
+              <div class="industries__heading">
+                <span class="industries__badge section-badge">WHO WE SERVE</span>
+                <h2 class="industries__title heading-lg">Primary Industries</h2>
+              </div>
+              <div class="industries__navigation">
+                <button
+                  type="button"
+                  aria-label="Previous"
+                  class="industries__button industries__button--prev slider-button"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 16" fill="none">
+                    <path
+                      d="M21.4502 7.80005C21.4501 8.2562 21.0952 8.63791 20.6436 8.63794L2.88965 8.63794L8.02441 14.0217C8.30918 14.3198 8.33211 14.7847 8.09766 15.1116C8.09792 15.1154 8.09851 15.1193 8.09863 15.1233L8.09668 15.1252C8.0952 15.1268 8.09214 15.1305 8.08691 15.136C8.08473 15.1383 8.08201 15.1407 8.0791 15.1438C8.06487 15.1587 8.04405 15.1808 8.02344 15.2024C7.99176 15.2356 7.9604 15.2689 7.95215 15.2776C7.95127 15.2785 7.95045 15.2793 7.95019 15.2795C7.94673 15.2796 7.94281 15.2776 7.93945 15.2776C7.62229 15.5296 7.16704 15.5049 6.87793 15.2024L0.380859 8.39087C0.0723672 8.06734 0.0726074 7.53389 0.380859 7.2102L6.87793 0.397704C7.19308 0.0672275 7.70781 0.0675699 8.02344 0.397704C8.33529 0.724004 8.33513 1.25099 8.02344 1.57739L2.88867 6.96216L20.6436 6.96216C21.0952 6.96219 21.4502 7.34379 21.4502 7.80005Z"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="0.3"
+                    />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  aria-label="Next"
+                  class="industries__button industries__button--next slider-button"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 16" fill="none">
+                    <path
+                      d="M0.149414 7.80005C0.14953 7.34389 0.504439 6.96219 0.956054 6.96216L18.71 6.96216L13.5752 1.57837C13.2904 1.28028 13.2675 0.815407 13.502 0.488525C13.5017 0.484688 13.5011 0.480796 13.501 0.476806L13.5029 0.474853C13.5044 0.473307 13.5075 0.469587 13.5127 0.464111C13.5149 0.461823 13.5176 0.459347 13.5205 0.456298C13.5347 0.441377 13.5556 0.419318 13.5762 0.397704C13.6078 0.364488 13.6392 0.331166 13.6475 0.322509C13.6483 0.321592 13.6492 0.320827 13.6494 0.320556C13.6529 0.320476 13.6568 0.322475 13.6602 0.322509C13.9773 0.0704735 14.4326 0.0952397 14.7217 0.397704L21.2187 7.20923C21.5272 7.53276 21.527 8.0662 21.2187 8.38989L14.7217 15.2024C14.4065 15.5329 13.8918 15.5325 13.5762 15.2024C13.2643 14.8761 13.2645 14.3491 13.5762 14.0227L18.7109 8.63794L0.956054 8.63794C0.504428 8.63791 0.149414 8.25631 0.149414 7.80005Z"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="0.3"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="industries__body">
+              <div class="industries__slider swiper-slider" id="industries-slider">
+                <div class="industries__slider-wrapper swiper-wrapper">
+                  <div class="industries__slide swiper-slide">
+                    <h3 class="industries__slide-title heading-sm">RESTAURANTS</h3>
+                    <img src="/images/home/slide1.png" alt="Industry 1" class="industries__slide-image" />
+                  </div>
+                  <div class="industries__slide swiper-slide">
+                    <h3 class="industries__slide-title heading-sm">HEALTHCARE</h3>
+                    <img src="/images/home/slide10.png" alt="Industry 1" class="industries__slide-image" />
+                  </div>
+                  <div class="industries__slide swiper-slide">
+                    <h3 class="industries__slide-title heading-sm">RESTAURANTS</h3>
+                    <img src="/images/home/slide11.png" alt="Industry 1" class="industries__slide-image" />
+                  </div>
+                  <div class="industries__slide swiper-slide">
+                    <h3 class="industries__slide-title heading-sm">HEALTHCARE</h3>
+                    <img src="/images/home/slide12.png" alt="Industry 1" class="industries__slide-image" />
+                  </div>
+                  <div class="industries__slide swiper-slide">
+                    <h3 class="industries__slide-title heading-sm">RESTAURANTS</h3>
+                    <img src="/images/home/slide13.png" alt="Industry 1" class="industries__slide-image" />
+                  </div>
+                  <div class="industries__slide swiper-slide">
+                    <h3 class="industries__slide-title heading-sm">HEALTHCARE</h3>
+                    <img src="/images/home/slide14.png" alt="Industry 1" class="industries__slide-image" />
+                  </div>
+                  <div class="industries__slide swiper-slide">
+                    <h3 class="industries__slide-title heading-sm">RESTAURANTS</h3>
+                    <img src="/images/home/slide11.png" alt="Industry 1" class="industries__slide-image" />
+                  </div>
+                  <div class="industries__slide swiper-slide">
+                    <h3 class="industries__slide-title heading-sm">HEALTHCARE</h3>
+                    <img src="/images/home/slide12.png" alt="Industry 1" class="industries__slide-image" />
+                  </div>
+                  <div class="industries__slide swiper-slide">
+                    <h3 class="industries__slide-title heading-sm">RESTAURANTS</h3>
+                    <img src="/images/home/slide13.png" alt="Industry 1" class="industries__slide-image" />
+                  </div>
+                  <div class="industries__slide swiper-slide">
+                    <h3 class="industries__slide-title heading-sm">HEALTHCARE</h3>
+                    <img src="/images/home/slide14.png" alt="Industry 1" class="industries__slide-image" />
+                  </div>
+                </div>
+              </div>
+              <div class="industries__pagination swiper-pagination slider-pagination"></div>
+            </div>
+          </div>
+        </section>
+
+        <div class="spacer" style="--desktop: 140px; --tablet: 100px; --mobile: 60px"></div>
       </main>
       {{> footer}}
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
     <script type="module" src="/src/scripts/main.ts" defer></script>
   </body>
 </html>

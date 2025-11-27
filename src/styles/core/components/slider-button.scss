@@ -1,0 +1,21 @@
+@use "../helpers" as *;
+
+.slider-button {
+  width: fluid(40, 68);
+  height: fluid(40, 68);
+  background-color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  border-radius: var(--radius-full);
+  transition: background-color 0.3s ease;
+
+  svg {
+    width: fluid(12, 22);
+  }
+
+  @include hover {
+    background: conic-gradient(from -90deg at 61.03% 50%, #4dc4bf 0deg, #f7be45 360deg);
+  }
+}
