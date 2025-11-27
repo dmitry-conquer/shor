@@ -5,6 +5,7 @@ export default class Sliders {
       // @ts-expect-error Swiper is not typed
       new Swiper(industriesSliderElement, {
         loop: true,
+        speed: 1000,
         parallax: true,
         navigation: {
           nextEl: ".industries__button--next",
