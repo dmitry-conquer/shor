@@ -1,0 +1,69 @@
+@use "../helpers" as *;
+
+.cta {
+  background-color: var(--color-white);
+  position: relative;
+
+  @include large {
+    padding-top: fluid(32, 181);
+  }
+
+  &__background {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    @include x-large {
+      right: -20%;
+    }
+
+    @include small {
+      right: 0;
+      height: rem(291);
+    }
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+
+    @include large {
+      align-items: stretch;
+      justify-content: stretch;
+      flex-direction: column;
+      row-gap: rem(32);
+    }
+  }
+
+  &__content {
+    flex: 0 1 38%;
+    @include large {
+      flex: 0 1 auto;
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(16);
+  }
+
+  &__text {
+    margin-bottom: fluid(24, 40);
+  }
+
+  &__buttons {
+    display: flex;
+    column-gap: fluid(8, 20);
+  }
+
+  &__button {
+  }
+
+  &__image {
+    @include small {
+      max-width: rem(291);
+      margin: 0;
+    }
+  }
+}
