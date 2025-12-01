@@ -1,0 +1,63 @@
+@use "../helpers" as *;
+
+.dark-section {
+  background-color: var(--color-primary);
+  padding-block: fluid(32, 80);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(24);
+  }
+
+  &__content {
+    flex: 0 1 rem(560);
+  }
+
+  &__title {
+    color: var(--color-white);
+    margin-bottom: fluid(16, 24);
+  }
+
+  &__text {
+    color: var(--color-white);
+    font-size: rem(16);
+    line-height: 1.5;
+    margin-bottom: rem(16);
+  }
+
+  &__list-title {
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__list-item {
+  }
+
+  &__list-item-icon {
+  }
+
+  &__list-item-title {
+  }
+
+  &__list-bottomtitle {
+  }
+
+  &__bottom-text {
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: var(--radius-lg);
+    }
+  }
+
+  &__background {
+  }
+}
