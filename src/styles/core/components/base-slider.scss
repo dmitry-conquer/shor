@@ -1,0 +1,156 @@
+@use "../helpers" as *;
+
+.base-slider {
+  padding-top: fluid(32, 80);
+  position: relative;
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: fluid(286, 415);
+    object-fit: cover;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 2;
+
+    @include medium {
+      padding-right: 0;
+    }
+  }
+
+  &__header {
+    margin-bottom: fluid(24, 70);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    column-gap: rem(60);
+    padding-right: rem(20);
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: rem(24);
+  }
+
+  &__badge {
+  }
+
+  &__title {
+    br {
+      display: inline !important;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    column-gap: rem(8);
+  }
+
+  &__button {
+    &--prev {
+    }
+
+    &--next {
+    }
+  }
+
+  &__body {
+    display: flex;
+    column-gap: rem(22);
+
+    @include medium {
+      flex-direction: column-reverse;
+      row-gap: rem(24);
+    }
+  }
+
+  &__slider {
+    overflow: hidden;
+    padding: rem(14);
+    margin: rem(-14);
+    max-width: 100%;
+    width: 100%;
+
+    @include medium {
+      padding: 0;
+      margin: 0;
+      overflow: visible;
+    }
+  }
+
+  &__slider-wrapper {
+    align-items: flex-start;
+
+    @include medium {
+      align-items: stretch;
+    }
+  }
+
+  &__pagination {
+    display: flex !important;
+    flex: 0 0 rem(8);
+    flex-direction: column;
+    row-gap: rem(10);
+    width: rem(10);
+    padding-top: 0;
+
+    .swiper-pagination-bullet {
+      background-color: var(--color-white);
+
+      @include medium {
+        background-color: var(--color-primary);
+      }
+    }
+
+    @include medium {
+      flex-direction: row;
+    }
+  }
+}
+
+.base-slide {
+  border-radius: var(--radius-lg);
+  background-color: var(--color-white);
+  box-shadow: 0 6px 15px 0 rgba(11, 54, 84, 0.1);
+  padding: fluid(32, 40) fluid(16, 40);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  cursor: pointer;
+  min-height: rem(224);
+
+  @include medium {
+    min-height: unset;
+  }
+
+  &__icon {
+    width: fluid(25, 52);
+    height: fluid(25, 52);
+    object-fit: contain;
+  }
+
+  &__title {
+    margin-top: fluid(16, 32);
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+
+    @include medium {
+      max-height: 100% !important;
+      overflow: visible !important;
+    }
+  }
+
+  &__text {
+    padding-top: rem(12);
+  }
+}
