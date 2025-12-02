@@ -1,0 +1,81 @@
+@use "../helpers" as *;
+
+.base-list {
+  padding-top: fluid(32, 80);
+  position: relative;
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: fluid(378, 451);
+    object-fit: cover;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: rem(24);
+    margin-bottom: fluid(24, 70);
+  }
+
+  &__badge {
+  }
+
+  &__title {
+    br {
+      display: inline !important;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: fluid(10, 20);
+
+    @include medium {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__item {
+  }
+}
+
+.base-item {
+  border-radius: var(--radius-lg);
+  background-color: var(--color-white);
+  box-shadow: 0 6px 15px 0 rgba(11, 54, 84, 0.1);
+  padding: fluid(24, 40) fluid(8, 40);
+  display: flex;
+  flex-direction: column;
+
+  @include medium {
+    align-items: center;
+  }
+
+  @include small {
+    border-radius: var(--radius-md);
+  }
+
+  &__icon {
+    width: fluid(25, 52);
+    height: fluid(25, 52);
+    object-fit: contain;
+  }
+  &__title {
+    margin-top: fluid(16, 32);
+    font-size: fluid(14, 20);
+
+    @include medium {
+      text-align: center;
+    }
+  }
+}
