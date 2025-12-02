@@ -1,0 +1,137 @@
+@use "../helpers" as *;
+
+.light-section {
+  padding-block: fluid(80, 140);
+  position: relative;
+
+  &__container {
+    display: flex;
+    align-items: flex-end;
+    gap: rem(24);
+    position: relative;
+    z-index: 2;
+
+    @include medium {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  &__content {
+    flex: 0 1 rem(596);
+    margin-right: fluid(20, 154);
+
+    @include medium {
+      flex: 0 1 auto;
+      margin-right: 0;
+      display: contents;
+    }
+  }
+
+  &__badge {
+    margin-bottom: rem(24);
+    display: inline-block;
+    max-width: max-content;
+    @include medium {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(16);
+
+    @include medium {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    margin-bottom: fluid(24, 32);
+
+    @include medium {
+      margin-bottom: 0;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: var(--radius-lg);
+
+    @include medium {
+      order: 3;
+      max-width: rem(750);
+      margin-inline: auto;
+    }
+    @include x-small {
+      height: rem(250);
+      margin: 0;
+    }
+  }
+
+  &__list {
+    flex: 0 1 rem(560);
+
+    @include medium {
+      flex: 0 1 auto;
+    }
+  }
+
+  &__list-title {
+    font-size: fluid(20, 32);
+  }
+
+  &__list-items {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(10);
+    margin-block: rem(24);
+    max-width: rem(509);
+  }
+
+  &__list-item {
+    border-radius: var(--radius-md);
+    background-color: var(--color-white);
+    padding: rem(12) fluid(16, 24);
+    display: flex;
+    align-items: center;
+    column-gap: rem(14);
+    box-shadow: 0 6px 15px 0 rgba(11, 54, 84, 0.1);
+    line-height: 1.1;
+    min-height: rem(84);
+  }
+
+  &__list-item-icon {
+    width: fluid(32, 52);
+    height: fluid(32, 52);
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  &__list-item-title {
+  }
+
+  &__list-text {
+  }
+
+  &__background {
+    position: absolute;
+    right: 0;
+    bottom: fluid(80, 140);
+
+    @media (max-width: rem(1600)) {
+      right: -10%;
+    }
+
+    @include medium {
+      right: 0;
+      z-index: 3;
+    }
+
+    @include x-small {
+      height: rem(250);
+    }
+  }
+}
