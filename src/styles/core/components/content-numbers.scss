@@ -85,7 +85,7 @@
     box-shadow: 0 6px 15px 0 rgba(11, 54, 84, 0.1);
     padding: fluid(16, 40) fluid(16, 24);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     column-gap: rem(16);
   }
 

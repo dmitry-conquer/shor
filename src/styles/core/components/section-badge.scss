@@ -10,7 +10,12 @@
   text-transform: uppercase;
   border-radius: var(--radius-xl);
   display: block;
-  
+  margin-right: rem(-30);
+
+  @include medium {
+    margin-right: 0;
+  }
+
   &--secondary {
     background-color: var(--color-secondary);
   }

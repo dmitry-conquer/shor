@@ -18,7 +18,7 @@
 
   &__left {
     padding-block: fluid(40, 80);
-    padding-right: fluid(20, 215);
+    padding-right: fluid(20, 96);
     position: relative;
     &::before {
       content: "";
@@ -42,13 +42,14 @@
     &-content {
       position: relative;
       z-index: 2;
-      max-width: rem(374);
+      max-width: rem(493);
     }
   }
 
   &__title {
     color: var(--color-white);
     margin-bottom: fluid(16, 22);
+    font-size: fluid(32, 50);
   }
 
   &__text {
@@ -56,11 +57,15 @@
   }
 
   &__right {
-    flex: 0 1 rem(655);
+    flex: 1 1 rem(780);
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     row-gap: fluid(24, 50);
+
+    @include x-large {
+      flex: 0 1 rem(780);
+    }
 
     @include medium {
       flex: 0 1 auto;
