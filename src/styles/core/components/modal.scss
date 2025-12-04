@@ -67,7 +67,7 @@ width: 100%;
   }
   &__close {
     position: absolute;
-    right: rem(-32);
+    right: 0;
     top: rem(-32);
     z-index: 10;
     @media (any-hover: hover) {
