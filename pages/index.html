@@ -29,8 +29,24 @@
                 </p>
               </div>
               <div class="hero__buttons">
-                <a href="#" class="hero__button button button--primary">BECOME A PARTNER</a>
-                <a href="#" class="hero__button button button--transparent">APPLY FOR FUNDING</a>
+                <button
+                  type="button"
+                  aria-label="Become a Partner"
+                  data-micromodal-trigger="popup-partner"
+                  aria-controls="popup-partner"
+                  class="hero__button button button--primary"
+                >
+                  BECOME A PARTNER
+                </button>
+                <button
+                  type="button"
+                  aria-label="Apply for Funding"
+                  data-micromodal-trigger="popup-funding"
+                  aria-controls="popup-funding"
+                  class="hero__button button button--transparent"
+                >
+                  APPLY FOR FUNDING
+                </button>
               </div>
             </div>
             <div class="hero__image">
@@ -467,7 +483,7 @@
 
         <div class="spacer" style="--desktop: 140px; --tablet: 100px; --mobile: 60px"></div>
       </main>
-      {{> footer}}
+      {{> popup-partner}} {{> popup-funding}} {{> footer}}
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
     <script type="module" src="/src/scripts/main.ts" defer></script>

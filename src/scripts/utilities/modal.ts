@@ -1,11 +1,9 @@
 import MicroModal from "micromodal";
 
-export const initModal = (scroll: any) => {
+export const initModal = () => {
   MicroModal.init({
     disableScroll: true,
     disableFocus: true,
-    onShow: () => scroll.stop(),
-    onClose: () => scroll.start(),
   });
 };
 

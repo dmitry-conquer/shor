@@ -3,9 +3,13 @@ import ScrollHeader from "./scrollHeader";
 import { Sliders, BackTopButton, Accordion } from "./components";
 import Scroll from "./services/scroll";
 import AOS from "aos";
+import { initModal } from "./utilities/modal";
 import "aos/dist/aos.css";
 
 document.addEventListener("DOMContentLoaded", (): void => {
+  // Initialize modal
+  initModal();
+
   // Initialize scroll header
   new ScrollHeader();
 
