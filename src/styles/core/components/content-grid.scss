@@ -49,7 +49,7 @@
     }
 
     @include x-small {
-      grid-auto-rows: rem(136);
+      grid-auto-rows: auto;
     }
   }
 
